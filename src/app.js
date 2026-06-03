@@ -11,4 +11,11 @@ app.use(express.json());
 
 app.use("/api", contactRoutes);
 
+app.get("/", (req, res) => {
+  res.json({
+    success: true,
+    message: "Orbynex API online",
+  });
+});
+
 export default app;
